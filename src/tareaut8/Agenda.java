@@ -120,23 +120,10 @@ public class Agenda {
     }
     
     
-//    public String noLaborable(LocalDate dia){
-//        if(noLaborable.containsValue(dia) == true){
-//            return this.noLaborable.keySet();
-//        }else {
-//            return ""
-//        }
-//    }
-//
-//    
-//    
-    
-    
-    public Cita buscarCitaDeCliente(int idCliente){
-      return
+    public String noLaborable(LocalDate dia){
+        
     }
-    
-    
-}
-    
 
+    
+    
+    
