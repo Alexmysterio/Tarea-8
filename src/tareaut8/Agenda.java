@@ -1,20 +1,14 @@
 package tareaut8;
 
 import java.time.DayOfWeek;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.Period;
-import java.util.Arrays;
-import java.util.Collection;
-import static java.util.Collections.list;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
+
+
 
 /**
  *
@@ -44,7 +38,7 @@ public class Agenda {
     
     public List <Cita> listaCitas = new LinkedList<Cita>();
     public Set<DayOfWeek> noHabiles = new HashSet<DayOfWeek>();
-    public HashMap<String, IntervaloFechas> noLaborable;
+    public HashMap<String, IntervaloFechas> noLaborables;
     public IntervaloFechas intervaloFechas;
     
     public Agenda(String nombreAgenda, int maximoCitas, Set diasNoHabiles, HashMap diasNoLaborables) throws IllegalArgumentException{
@@ -65,7 +59,7 @@ public class Agenda {
         }
 
         if(diasNoLaborables != null){
-            this.noLaborable = diasNoLaborables;
+            this.noLaborables = diasNoLaborables;
         }
             
     }
@@ -107,7 +101,7 @@ public class Agenda {
             + "Días no hábiles: "+ this.noHabiles +"\n"
             + "Rango de fechas no laborables:\n"
             + "..............................\n"
-            + noLaborable.toString().replaceAll(",","\n").replaceAll("=", ": ");
+            + noLaborables.toString().replaceAll(",","\n").replaceAll("=", ": ");
         return cadena;
     }
     
@@ -118,11 +112,7 @@ public class Agenda {
             return true;
         }
     }
-    
-    
-    public String noLaborable(LocalDate dia){
-        
-    }
+}
 
     
     
